@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@drawable/background2"
+    tools:context=".Registration_User">
+
+    <!--header logo-->
+    <ImageView
+        android:id="@+id/logoCover"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:padding="15dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logonew"
+        tools:ignore="ContentDescription" />
+
+
+    <!--    root layout-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/logoCover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"
+        >
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingVertical="30dp"
+        android:paddingHorizontal="10dp">
+
+
+        <!--Header-->
+
+
+
+
+        <!--        লিঙ্গঃ-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+
+            android:padding="10dp"
+
+
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/why_do_you_register"
+                android:textColor="@color/gold_regular"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+
+                <RadioButton
+                    android:id="@+id/rbZakatApply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/apply_for_zakat"
+                    android:textColor="@color/GoldDark" />
+
+                <RadioButton
+                    android:id="@+id/rbZakatDonate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/donate_for_zakat"
+                    android:textColor="@color/GoldDark" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!--
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:animateLayoutChanges="true"
+                    android:animationCache="true"
+                    android:elevation="5dp"
+                    android:padding="10dp"
+                    android:prompt="@string/spinner_title" />
+        -->
+
+        <!--//Zakat Receiver Registration User  Phone number -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:hint="@string/enter_your_mobile_number"
+            android:textColor="@color/GoldDark"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_phone"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUserPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/GoldDark" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--//Zakat Receiver Registration User  Password -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:hint="Enter 4 digit pin"
+            android:paddingTop="00dp"
+            android:textColor="@color/gold_dark"
+            app:endIconMode="password_toggle"
+            app:startIconDrawable="@drawable/ic_lock"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUserPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:textColor="@color/GoldDark" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--//Zakat Receiver Registration User  confirm password -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:hint="@string/confirm_your_pin"
+            android:paddingTop="00dp"
+            android:textColor="@color/gold_dark"
+            app:endIconMode="password_toggle"
+            app:startIconDrawable="@drawable/ic_lock"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUserConPw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:textColor="@color/GoldDark" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--        রেজিস্ট্রেশন সাবমিট বাটন-->
+        <Button
+            android:id="@+id/btReg"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="15dp"
+            android:padding="15dp"
+            android:text="@string/registration"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>
