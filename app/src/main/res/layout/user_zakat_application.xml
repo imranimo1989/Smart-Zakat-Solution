@@ -1,0 +1,1219 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main"
+    android:orientation="vertical"
+    >
+
+
+    <!--    root layout-->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C6FFFCFC"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp">
+
+        <!--header logo-->
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logonew"
+
+
+            />
+
+        <!--Header-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="যাকাত এর জন্য আবেদন ফর্ম পূরণ করুন"
+            android:textColor="@color/gold_regular"
+            android:textSize="15sp"
+            android:textStyle="bold"
+
+
+            />
+
+        <!--//name in bangla -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="আবেদনকারীর নামঃ"
+            android:textColor="@color/GoldDark"
+            app:endIconMode="clear_text"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="@color/GoldDark" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--//name in english-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:hint=" In English"
+            android:textColor="@color/GoldDark"
+            app:endIconMode="clear_text"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNameEng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="@color/GoldDark" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--//বাবার নামঃ-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="বাবার নামঃ"
+            android:textColor="@color/GoldDark"
+            app:endIconMode="clear_text"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNameFather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="@color/GoldDark" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--//মাতার নামঃ-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:hint="মাতার নামঃ"
+            android:textColor="@color/GoldDark"
+            app:endIconMode="clear_text"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNameMother"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="@color/GoldDark" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--        লিঙ্গঃ-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:padding="10dp"
+
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="লিঙ্গঃ"
+                android:textColor="@color/GoldDark" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+
+                <RadioButton
+                    android:id="@+id/rbMaleGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="পুরুষ"
+                    android:textColor="@color/GoldDark" />
+
+                <RadioButton
+                    android:id="@+id/rbGenderWomen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="মহিলা"
+                    android:textColor="@color/GoldDark" />
+            </RadioGroup>
+
+        </LinearLayout>
+        <!--//মোবাইল নাম্বারঃ-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="মোবাইল নাম্বারঃ"
+            android:textColor="@color/GoldDark"
+            app:endIconMode="clear_text"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUserMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/GoldDark" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--//জাতীয় পরিচয় পত্র নাম্বারঃ-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="জাতীয় পরিচয় পত্র নাম্বারঃ"
+            android:textColor="@color/GoldDark"
+            app:endIconMode="clear_text"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etIdNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/GoldDark" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--        জাকাত গ্রহীতার ছবি -->
+
+        <ImageView
+            android:id="@+id/imgZakatReceiver"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:focusableInTouchMode="true"
+            android:adjustViewBounds="true"
+            android:visibility="gone" />
+
+
+        <!--image uplaod button-->
+        <Button
+            android:id="@+id/btPicUpload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/whiteNeo"
+            android:padding="10dp"
+            android:text="ছবি আপলোড করুন(নিজের)"
+            android:textColor="@color/DarkGraydeep" />
+
+
+        <!--        বর্তমান ঠিকানাঃ-->
+        <!--        headline-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/gold_dark"
+
+                />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="বর্তমান ঠিকানাঃ"
+                android:textColor="@color/gold_dark" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/gold_dark"
+
+                />
+
+        </LinearLayout>
+
+        <!--//বর্তমান-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:hint="বর্তমান ঠিকানাঃ"
+            android:textColor="@color/GoldDark"
+            app:endIconMode="clear_text"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAddresPresent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:textColor="@color/GoldDark" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--        নিজের স্থায়ী ঠিকানাঃ-->
+        <!--        headline-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/gold_dark"
+
+                />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="স্থায়ী ঠিকানাঃ"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/gold_dark" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/gold_dark"
+
+                />
+
+        </LinearLayout>
+
+        <!--//দেশের নামঃ-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:hint="দেশের নামঃ"
+            android:textColor="@color/GoldDark"
+            app:endIconMode="clear_text"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAddressCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/GoldDark" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--//বিভাগঃ-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="বিভাগের নামঃ"
+            android:textColor="@color/GoldDark"
+            app:endIconMode="clear_text"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAddressDivision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/GoldDark" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--//জেলার নামঃ-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="জেলার নামঃ"
+            android:textColor="@color/GoldDark"
+            app:endIconMode="clear_text"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAddressDistrict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/GoldDark" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--//ওয়ার্ডঃ-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="থানার নামঃ"
+            android:textColor="@color/GoldDark"
+            app:endIconMode="clear_text"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAddressThana"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/GoldDark" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--//গ্রামের নামঃ-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:hint="গ্রামের নামঃ"
+            android:textColor="@color/GoldDark"
+            app:endIconMode="clear_text"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAddressVillage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/GoldDark" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--//ওয়ার্ডঃ-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:hint="ওয়ার্ডের নামঃ"
+            android:textColor="@color/GoldDark"
+            app:endIconMode="clear_text"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAddressWard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/GoldDark" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--        বৈবাহিক অবস্থাঃ-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:padding="10dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="বৈবাহিক অবস্থাঃ"
+                android:textColor="@color/GoldDark" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupMaritalStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+
+                <RadioButton
+                    android:id="@+id/rbMarried"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="বিবাহিত"
+                    android:textColor="@color/GoldDark" />
+
+                <RadioButton
+                    android:id="@+id/rbUnmarried"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="অবিবাহিত"
+                    android:textColor="@color/GoldDark" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+        <!--        Marital status panel-->
+        <LinearLayout
+            android:id="@+id/layMaritalStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <!--//স্বামী/স্ত্রীর নামঃ-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:hint="স্বামী/স্ত্রীর নামঃ"
+                android:textColor="@color/GoldDark"
+                app:endIconMode="clear_text"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etHusWifeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/GoldDark" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--//স্বামী/স্ত্রীর মোবাইল নাম্বার-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:hint="স্বামী/স্ত্রীর মোবাইল নাম্বারঃ"
+                android:textColor="@color/GoldDark"
+                app:endIconMode="clear_text"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etWifeMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="@color/GoldDark" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--//ফেমেলির সদস্য সংখ্যা উল্লেখ করুনঃ-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:hint="ফেমেলির সদস্য সংখ্যা উল্লেখ করুনঃ"
+                android:textColor="@color/GoldDark"
+                app:endIconMode="clear_text"
+
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFamilyMember"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="@color/GoldDark" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        </LinearLayout>
+
+        <!--//Education Qualifications -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="শিক্ষাগত যোগ্যতাঃ"
+            android:textColor="@color/GoldDark"
+            app:endIconMode="clear_text"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEduQualification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="@color/GoldDark" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--//Profession  -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="বর্তমান পেশাঃ "
+            android:textColor="@color/GoldDark"
+            app:endIconMode="clear_text"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etProfession"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="@color/GoldDark" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--//Age -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="বয়সঃ"
+            android:textColor="@color/GoldDark"
+            app:endIconMode="clear_text"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="@color/GoldDark" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--    নিজস্ব বাসস্থান আছে কিনাঃ?-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:padding="10dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="নিজস্ব বাসস্থান আছে কিনাঃ?"
+                android:textColor="@color/GoldDark" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+
+                <RadioButton
+                    android:id="@+id/rbOwnHouseYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="হ্যাঁ "
+                    android:textColor="@color/GoldDark" />
+
+                <RadioButton
+                    android:id="@+id/rbOwnHouseNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="না"
+                    android:textColor="@color/GoldDark" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+
+        <!--//জমি জমার পরিমান -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="জমি জমার পরিমাণঃ "
+            android:textColor="@color/GoldDark"
+            app:endIconMode="clear_text"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etOwnProperty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="@color/GoldDark" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--//Zakat history  -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:padding="10dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="আগে কখনো যাকাত নিয়েছেন কিনা?"
+                android:textColor="@color/GoldDark" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+
+                <RadioButton
+                    android:id="@+id/rbZakatHistoryYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="হ্যাঁ "
+                    android:textColor="@color/GoldDark" />
+
+                <RadioButton
+                    android:id="@+id/rbZakatHistoryNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="না"
+                    android:textColor="@color/GoldDark" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+<!--        আবেদন কারী কোন খাতের হ্বকদার তা ঠিক চিহ্ন দিন -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#2CEC9F05"
+            android:weightSum="4"
+            >
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="আপনি একজন (নিচের বক্সে টিক চিহ্ন দিন)"
+                android:textColor="@color/gold_regular"
+                android:layout_weight="1"
+                android:textStyle="bold"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:weightSum="3"
+                >
+                <CheckBox
+                    android:id="@+id/checkBoxFokirMiskin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="ফকির/মিসকিন"
+                    android:layout_weight="1"
+                     />
+                <CheckBox
+                    android:id="@+id/checkBoxNewMuslim"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="নওমুসলিম"
+                    android:layout_weight="1"
+                    />
+                <CheckBox
+                    android:id="@+id/checkBoxHelpless"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="ঋনগ্রস্থ অসহায়"
+                    android:layout_weight="1"
+                    />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:weightSum="3"
+                >
+                <CheckBox
+                    android:id="@+id/checkBoxBlind"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="অন্ধ"
+                    android:layout_weight="1"
+                    />
+
+                <CheckBox
+                    android:id="@+id/checkBoxPoorStudent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="দরিদ্র ও এতিম শিক্ষার্থী"
+                    android:layout_weight="1"
+                    />
+                <CheckBox
+                    android:id="@+id/checkBoxAllahRastaiMehnotkari"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="আল্লাহ রাস্তায় মেহনতকারী"
+                    android:layout_weight="1"
+                    />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:weightSum="3"
+                >
+
+                <CheckBox
+                    android:id="@+id/checkBoxPidito"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="পীড়িত"
+                    android:layout_weight="1"
+                    />
+
+                <CheckBox
+                    android:id="@+id/checkBoxDisable"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="কর্মে অক্ষম"
+                    android:layout_weight="1"
+                    />
+                <CheckBox
+                    android:id="@+id/checkBoxHelplessWomen"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="অসহায় মহিলা"
+                    android:layout_weight="1"
+                    />
+
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/gold_regular"
+                />
+
+        </LinearLayout>
+<!--        ===============================================================-->
+
+
+
+        <!--//own Story -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="নিজের সম্পর্কে বলুনঃ "
+            android:textColor="@color/GoldDark"
+            app:endIconMode="clear_text"
+            android:layout_marginTop="10dp"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etOwnStory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:textColor="@color/GoldDark" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <!--        কোন কার্যক্রমের জন্য যাকাতের আবেদন করতে চান (টিক চিহ্ন দিন) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#2CEC9F05"
+            android:weightSum="3"
+            >
+
+            <TextView
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="কোন কার্যক্রমের জন্য যাকাতের আবেদন করতে চান (টিক চিহ্ন দিন)"
+                android:textColor="@color/gold_regular"
+                android:layout_weight="1"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:gravity="center"
+                >
+                <CheckBox
+                    android:id="@+id/checkBoxMurgiPalon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="মুরগী পালন"
+                    android:layout_weight="1"
+                    />
+                <CheckBox
+                    android:id="@+id/checkBoxCagolPalon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="ভেডা/ছাগল পালন"
+                    android:layout_weight="1"
+                    />
+                <CheckBox
+                    android:id="@+id/checkBoxGaviPalon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="গাভী পালন"
+                    android:layout_weight="1"
+                    />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:gravity="center"
+                >
+                <CheckBox
+                    android:id="@+id/checkBoxKudroBebsa"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="ক্ষুদ্র ব্যবসা"
+                    android:layout_weight="1"
+                    />
+
+                <CheckBox
+                    android:id="@+id/checkBoxSelaiMachine"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="সেলাই মেশিন"
+                    android:layout_weight="1"
+                    />
+                <CheckBox
+                    android:id="@+id/checkBoxRikshawOrVan"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="রিকশা/ভ্যান"
+                    android:layout_weight="1"
+                    />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:weightSum="3"
+                >
+
+                <CheckBox
+                    android:id="@+id/checkBoxRinPorishod"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="ঋণ পরিশোধ"
+                    android:layout_weight="1"
+                    />
+
+                <CheckBox
+                    android:id="@+id/checkBoxCikitsa"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="চিকিৎসা"
+                    android:layout_weight="1"
+                    />
+                <CheckBox
+                    android:id="@+id/checkBoxGrihoMeramot"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="গৃহ মেরামত"
+                    android:layout_weight="1"
+                    />
+
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/gold_regular"
+                />
+
+        </LinearLayout>
+
+
+        <!--        attachment of chairman or member-->
+
+        <ImageView
+            android:id="@+id/imgAttachmentOfChairman"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:focusableInTouchMode="true"
+            android:adjustViewBounds="true"
+            android:visibility="gone" />
+
+
+        <!--image uplaod button-->
+        <Button
+            android:id="@+id/btPicUploadAttachmentOfChairman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/whiteNeo"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            android:text="সংযুক্তিঃ মেয়র/চেয়ারম্যান প্রদত্ব প্রত্যয়ন পত্র।"
+            android:textColor="@color/DarkGraydeep" />
+
+
+
+
+
+<CheckBox
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="উপরের প্রদত্ব সকল তথ্য সঠিক নির্ভুল, এবং যাকাত গ্রহনের সকল সর্তাবলী আমি মেনে নিয়েছি। "
+    android:padding="10dp"
+    android:background="#8DFDED57"
+    android:layout_marginTop="20dp"
+    android:textStyle="italic"
+    />
+
+
+
+        <!--        রেজিস্ট্রেশন সাবমিট বাটন-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:padding="13dp"
+            android:text="Registration"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <!--  &lt;!&ndash;//ছেলে সংখ্যাঃ&ndash;&gt;
+          <com.google.android.material.textfield.TextInputLayout
+              style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+
+              android:layout_marginBottom="5dp"
+              android:layout_weight="1"
+              android:hint="ছেলের সংখ্যা"
+              android:textColor="@color/GoldDark"
+              app:endIconMode="clear_text"
+
+
+              >
+
+              <com.google.android.material.textfield.TextInputEditText
+                  android:id="@+id/etSonNumber"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginHorizontal="20dp"
+                  android:inputType="number"
+
+                  android:textColor="@color/GoldDark" />
+
+          </com.google.android.material.textfield.TextInputLayout>
+          &lt;!&ndash;//মেয়ে সংখ্যাঃ&ndash;&gt;
+          <com.google.android.material.textfield.TextInputLayout
+              style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+
+              android:layout_marginBottom="5dp"
+              android:layout_weight="1"
+              android:hint="মেয়ের সংখাঃ"
+              android:textColor="@color/GoldDark"
+              app:endIconMode="clear_text"
+
+
+              >
+
+              <com.google.android.material.textfield.TextInputEditText
+                  android:id="@+id/etGirlNumber"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginHorizontal="20dp"
+                  android:inputType="number"
+
+                  android:textColor="@color/GoldDark" />
+
+          </com.google.android.material.textfield.TextInputLayout>
+
+  -->
+
+    </LinearLayout>
+
+
+</ScrollView>
