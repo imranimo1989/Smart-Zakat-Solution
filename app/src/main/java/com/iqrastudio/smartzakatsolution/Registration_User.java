@@ -102,9 +102,14 @@ public class Registration_User extends AppCompatActivity {
                                         showToast("Your Registration has been successful.");
 
                                         Intent intent = new Intent(Registration_User.this, Login_User.class);
+
+                                        //to receive value for login activity user id pass
                                         intent.putExtra("user_mob",userMobile);
+                                        intent.putExtra("user_pin",userPin);
+
+
                                         startActivity(intent);
-                                        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_in_right);
+                                       // overridePendingTransition(R.anim.slide_in_left,R.anim.slide_in_right);
 
 
 

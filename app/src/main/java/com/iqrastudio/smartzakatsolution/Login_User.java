@@ -11,6 +11,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
 public class Login_User extends AppCompatActivity {
 
 
@@ -29,12 +36,41 @@ public class Login_User extends AppCompatActivity {
         final Button btUserReg = findViewById(R.id.btReg);
 
 
-        //String getUserMob = getIntent().getExtras().getString("user_mob");
-      //  etLoginUserMob.setText(getUserMob);
-        // on below line we are setting our message to our text view.
-        etLoginUserMob.setText(getIntent().getStringExtra("user_mob"));
+        // get Registered User Mobile Number via intent from Registration Activity
+
+        String loginId = getIntent().getStringExtra("user_mob");
+        String loginpw = getIntent().getStringExtra("user_pin");
+
+        etLoginUserMob.setText(loginId);
 
 
+        //===============================================================
+
+        btUserLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                if (etLoginUserMob.getText().toString().equals(loginId)||etLoginUserPin.getText().toString().equals(loginpw))
+
+                {
+                    Intent intent = new Intent(Login_User.this,MainActivity.class);
+                    startActivity(intent);
+
+                }else {
+                    new AlertDialog.Builder(Login_User.this)
+                            .setTitle("Login Error!")
+                            .setMessage("Your Input Id or Wrong")
+                            .setIcon(R.drawable.ic_error)
+                            .show();
+                }
+
+            }
+        });
+
+
+
+        //================================================================
 
         btUserReg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,7 +86,33 @@ public class Login_User extends AppCompatActivity {
 
             }
         });
+
+        //===================================================================
+
+        String url ="";
+
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+
+        RequestQueue requestQueue = Volley.newRequestQueue(Login_User.this);
+        requestQueue.add(stringRequest);
+
+
+
+
+
     }
+    //======================================================================
 
    /* public void showRegistrationPopup() {
 
