@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background2"
     android:orientation="vertical"
-    tools:context=".ProfileDashboardActivity">
+    tools:context=".ProfileUserDashboard">
 
     <!--heading toolbar-->
     <androidx.cardview.widget.CardView
@@ -27,7 +27,7 @@
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/menu"
+                android:src="@drawable/ic_menu"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
@@ -51,13 +51,15 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_alignParentEnd="true"
-                android:src="@drawable/logo_small"
-                app:civ_border_color="@color/gold_light"
+                android:src="@mipmap/ic_launcher_round"
+                app:civ_border_color="@color/gold_regular"
                 app:civ_border_width="2dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:padding="10dp"
+               android:padding="7dp"
+
+
 
                 />
         </RelativeLayout>
@@ -108,7 +110,7 @@
 
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/icon2"
+                        android:src="@drawable/icon_image"
 
 
                         />
@@ -162,7 +164,7 @@
 
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/icon2"
+                        android:src="@drawable/icon_image"
 
 
                         />
