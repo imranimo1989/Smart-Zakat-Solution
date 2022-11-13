@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.SmartZakatSolution" parent="Theme.MaterialComponents.Light.NoActionBar">
 
-
+<item name="background">@mipmap/ic_launcher_foreground</item>
 
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/gold_regular</item>

@@ -50,8 +50,18 @@ public class Login_User extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                if (etLoginUserMob.getText().toString().isEmpty()||etLoginUserPin.getText().toString().isEmpty()){
 
-                if (etLoginUserMob.getText().toString().equals(loginId)||etLoginUserPin.getText().toString().equals(loginpw))
+                        new AlertDialog.Builder(Login_User.this)
+                                .setTitle("Login Error!")
+                                .setMessage("Sorry! You missed something!")
+                                .setIcon(R.drawable.ic_error)
+                                .show();
+
+                }
+
+
+               else if (etLoginUserMob.getText().toString().equals(loginId)&&etLoginUserPin.getText().toString().equals(loginpw))
 
                 {
                     Intent intent = new Intent(Login_User.this,MainActivity.class);
@@ -60,7 +70,7 @@ public class Login_User extends AppCompatActivity {
                 }else {
                     new AlertDialog.Builder(Login_User.this)
                             .setTitle("Login Error!")
-                            .setMessage("Your Input Id or Wrong")
+                            .setMessage("Sorry! Your Input Mobile no. or Pin Wrong")
                             .setIcon(R.drawable.ic_error)
                             .show();
                 }
