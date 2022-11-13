@@ -1,7 +1,6 @@
 package com.iqrastudio.smartzakatsolution;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -64,7 +63,7 @@ public class Login_User extends AppCompatActivity {
                else if (etLoginUserMob.getText().toString().equals(loginId)&&etLoginUserPin.getText().toString().equals(loginpw))
 
                 {
-                    Intent intent = new Intent(Login_User.this,MainActivity.class);
+                    Intent intent = new Intent(Login_User.this, ProfileUserDashboard.class);
                     startActivity(intent);
 
                 }else {
@@ -92,7 +91,7 @@ public class Login_User extends AppCompatActivity {
 
                 Intent intent = new Intent(getApplicationContext(), Registration_User.class);
                 startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_left,R.anim.slide_in_right);
+                //overridePendingTransition(R.anim.slide_in_left,R.anim.slide_in_right);
 
             }
         });

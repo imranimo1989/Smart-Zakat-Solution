@@ -7,7 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-public class UserProfileDashboard extends AppCompatActivity {
+public class ProfileUserDashboard extends AppCompatActivity {
 
     CardView cardViewZakatApplication;
 
@@ -23,7 +23,7 @@ public class UserProfileDashboard extends AppCompatActivity {
             public void onClick(View view) {
 
                 //Zakat Registration Form
-                startActivity(new Intent(getApplicationContext(), UserProfileDashboard.class));
+                startActivity(new Intent(getApplicationContext(), ProfileUserDashboard.class));
                 overridePendingTransition(0, 0);
             }
         });
