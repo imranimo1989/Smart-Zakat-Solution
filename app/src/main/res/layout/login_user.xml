@@ -8,18 +8,10 @@
     android:background="@drawable/background2"
     tools:context=".Login_User">
 
-    <ImageView
-        android:id="@+id/logoCover"
-        android:layout_width="150dp"
-        android:layout_height="120dp"
-        android:scaleType="centerCrop"
-        android:padding="15dp"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/logonew"
-        tools:ignore="ContentDescription" />
+
 
     <androidx.cardview.widget.CardView
-        android:layout_below="@id/logoCover"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -34,10 +26,20 @@
             android:layout_gravity="center"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="20dp"
+          android:paddingHorizontal="20dp"
+           android:paddingVertical="20dp"
 
 
             >
+
+            <ImageView
+                android:id="@+id/logoCover"
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:padding="15dp"
+                android:src="@drawable/logonew"
+                tools:ignore="ContentDescription" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -79,7 +81,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="number"
-                        android:maxLength="11"
+                        android:maxLength="15"
                         android:textColor="@color/GoldDark" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -109,7 +111,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
-                    android:id="@+id/tvDontRemberBt"
+                    android:id="@+id/tvDontRememberBt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
@@ -120,7 +122,10 @@
                     android:padding="10dp"
                     android:text="@string/don_t_remember_your_pin"
                     android:textSize="15sp"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"
+                    tools:targetApi="m"
+                    android:textColor="@color/gold_regular"
+                    tools:ignore="UnusedAttribute" />
 
             </LinearLayout>
 
@@ -137,23 +142,25 @@
             <Button
                 android:id="@+id/btLogin"
                 android:layout_width="fill_parent"
-                android:layout_height="70dp"
+                android:layout_height="60dp"
                 android:layout_weight="1"
                 android:layout_marginEnd="6dp"
                 android:text="@string/login_main"
                 android:textColor="@color/white"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                style="?android:attr/buttonStyle" />
 
             <Button
                 android:id="@+id/btReg"
                 android:layout_width="fill_parent"
-                android:layout_height="70dp"
+                android:layout_height="60dp"
                 android:layout_weight="1"
                 android:layout_marginStart="6dp"
                 android:text="@string/registration"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/GoldDark"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                style="?android:attr/button"/>
 
             </LinearLayout>
 

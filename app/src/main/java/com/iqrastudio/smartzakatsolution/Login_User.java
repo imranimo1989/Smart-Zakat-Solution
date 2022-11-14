@@ -29,7 +29,7 @@ public class Login_User extends AppCompatActivity {
         final EditText etLoginUserMob = findViewById(R.id.etLoginUserMobile);
         final EditText etLoginUserPin = findViewById(R.id.etLoginPin);
 
-        final TextView tvResetPw = findViewById(R.id.tvDontRemberBt);
+        final TextView tvResetPw = findViewById(R.id.tvDontRememberBt);
 
         final Button btUserLogin = findViewById(R.id.btLogin);
         final Button btUserReg = findViewById(R.id.btReg);
@@ -42,6 +42,16 @@ public class Login_User extends AppCompatActivity {
 
         etLoginUserMob.setText(loginId);
 
+
+        //===============================================================
+            tvResetPw.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(Login_User.this, Forgot_Password.class);
+                    startActivity(intent);
+
+                }
+            });
 
         //===============================================================
 
