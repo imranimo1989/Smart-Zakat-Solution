@@ -23,8 +23,9 @@ public class ProfileUserDashboard extends AppCompatActivity {
             public void onClick(View view) {
 
                 //Zakat Registration Form
-                startActivity(new Intent(getApplicationContext(), ProfileUserDashboard.class));
+                startActivity(new Intent(getApplicationContext(), UserZakatApplication.class));
                 overridePendingTransition(0, 0);
+
             }
         });
 

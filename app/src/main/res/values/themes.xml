@@ -4,6 +4,8 @@
 
 <item name="background">@mipmap/ic_launcher_foreground</item>
 
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/gold_regular</item>
         <item name="colorPrimaryVariant">@color/gold_dark</item>
