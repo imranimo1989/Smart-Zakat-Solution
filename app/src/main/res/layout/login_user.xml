@@ -163,6 +163,22 @@
                 style="?android:attr/button"/>
 
             </LinearLayout>
+            <TextView
+                android:id="@+id/tvAboutUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+               android:padding="10dp"
+                android:text="Learn About Smart Zakat Solution App"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                tools:targetApi="m"
+                android:textColor="@color/gold_regular"
+                tools:ignore="UnusedAttribute" />
 
 
 

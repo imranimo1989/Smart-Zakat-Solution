@@ -73,7 +73,7 @@ public class Login_User extends AppCompatActivity {
                else if (etLoginUserMob.getText().toString().equals(loginId)&&etLoginUserPin.getText().toString().equals(loginpw))
 
                 {
-                    Intent intent = new Intent(Login_User.this, ProfileUserDashboard.class);
+                    Intent intent = new Intent(Login_User.this, User_Profile_Dashboard.class);
                     startActivity(intent);
 
                 }else {
@@ -99,7 +99,7 @@ public class Login_User extends AppCompatActivity {
 
 
 
-                Intent intent = new Intent(getApplicationContext(), Registration_User.class);
+                Intent intent = new Intent(getApplicationContext(), User_Registration.class);
                 startActivity(intent);
                 //overridePendingTransition(R.anim.slide_in_left,R.anim.slide_in_right);
 

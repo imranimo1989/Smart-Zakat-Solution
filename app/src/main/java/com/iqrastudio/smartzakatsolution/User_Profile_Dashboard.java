@@ -7,7 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-public class ProfileUserDashboard extends AppCompatActivity {
+public class User_Profile_Dashboard extends AppCompatActivity {
 
     CardView cardViewZakatApplication;
 

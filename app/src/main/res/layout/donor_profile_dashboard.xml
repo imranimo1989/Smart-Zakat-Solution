@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,7 +10,6 @@
 
     <!--heading toolbar-->
     <androidx.cardview.widget.CardView
-        android:id="@+id/topBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="5dp"
@@ -58,43 +57,14 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
-               android:padding="7dp"
+                android:padding="7dp"
 
 
 
                 />
-
-
-
         </RelativeLayout>
 
-
-
     </androidx.cardview.widget.CardView>
-
-    <LinearLayout
-        android:layout_below="@id/topBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="20dp"
-        android:background="#F6DEDE"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:text="Status: Pending..."
-            android:padding="10dp"
-            android:textColor="#757474"
-
-
-            />
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -113,9 +83,10 @@
             >
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewUpdateProfile"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-               android:layout_margin="20dp"
+                android:layout_margin="20dp"
                 android:layout_weight="1"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="5dp"
@@ -143,18 +114,39 @@
 
 
                         />
-
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="যাকাত আবেদনের শর্তাবলী"
-                        android:textColor="@color/gold_regular"
-                        android:textStyle="bold"
-                        android:padding="10dp"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Update Profile"
+                            android:textColor="@color/gold_regular"
+                            android:textStyle="bold"
+                            android:textSize="25dp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="Please update your profile to see all the zakat applicant list"
+                            android:textColor="@color/GoldWhite"
+                            android:textStyle="bold"
+                            />
 
 
-                        />
+                    </LinearLayout>
+
+
+
+
+
 
                 </LinearLayout>
 
@@ -197,20 +189,112 @@
 
 
                         />
-
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="যাকাতের জন্য আবেদন করুন"
-                        android:textColor="@color/gold_regular"
-                        android:textStyle="bold"
-                        android:padding="10dp"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Zakat Applicant"
+                            android:textColor="@color/gold_regular"
+                            android:textStyle="bold"
+                            android:textSize="25dp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="See All Zakat Application. And Donate only verified Applicant."
+                            android:textColor="@color/GoldWhite"
+                            android:textStyle="bold"
+                            />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewZakatCalculator"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="2">
+
+                    <ImageView
+
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/icon_image"
 
 
                         />
 
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Zakat Calculator"
+                            android:textColor="@color/gold_regular"
+                            android:textStyle="bold"
+                            android:textSize="25dp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="calculate your zakat with 100% Accuracy by Islami Sariah "
+                            android:textColor="@color/GoldWhite"
+                            android:textStyle="bold"
+                            />
+
+
+                    </LinearLayout>
+
                 </LinearLayout>
+
+
 
 
             </androidx.cardview.widget.CardView>
@@ -227,4 +311,4 @@
 
 
 
-</RelativeLayout>
+</LinearLayout>

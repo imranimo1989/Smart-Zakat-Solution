@@ -6,14 +6,10 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -23,15 +19,12 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Registration_User extends AppCompatActivity {
+public class User_Registration extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.registration_user);
+        setContentView(R.layout.user_registration);
 
 
         final RadioGroup radioGroup = findViewById(R.id.radioGroup);
@@ -101,7 +94,7 @@ public class Registration_User extends AppCompatActivity {
 
                                         showToast("Your Registration has been successful.");
 
-                                        Intent intent = new Intent(Registration_User.this, Login_User.class);
+                                        Intent intent = new Intent(User_Registration.this, Login_User.class);
 
                                         //to receive value for login activity user id pass
                                         intent.putExtra("user_mob",userMobile);
@@ -131,7 +124,7 @@ public class Registration_User extends AppCompatActivity {
                         });
 
                         // Add the request to the RequestQueue.
-                        RequestQueue queue = Volley.newRequestQueue(Registration_User.this);
+                        RequestQueue queue = Volley.newRequestQueue(User_Registration.this);
                         queue.add(stringRequest);
 
                     }
@@ -181,7 +174,7 @@ public class Registration_User extends AppCompatActivity {
 
 
     private void alertDialog(String dialog) {
-        new AlertDialog.Builder(Registration_User.this)
+        new AlertDialog.Builder(User_Registration.this)
                 .setTitle("Error")
                 .setMessage(dialog)
                 .show();
