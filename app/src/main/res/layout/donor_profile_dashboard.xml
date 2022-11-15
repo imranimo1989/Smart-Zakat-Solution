@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background2"
     android:orientation="vertical"
-    tools:context=".User_Profile_Dashboard">
+    tools:context=".Donor_Profile_Dashboard">
 
     <!--heading toolbar-->
     <androidx.cardview.widget.CardView
