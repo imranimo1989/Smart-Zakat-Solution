@@ -10,28 +10,34 @@
             android:title="Profile" />
         <item
             android:id="@+id/nav_status"
-            android:icon="@drawable/ic_status"
-            android:title="Status" />
+            android:icon="@drawable/ic_calculator"
+            android:title="Zakat Calculator" />
         <item
             android:id="@+id/nav_help"
-            android:icon="@drawable/ic_profile"
-            android:title="Help" />
+            android:icon="@drawable/ic_fund"
+            android:title="Zakat Fund" />
     </group>
 
     <item android:title="Smart Zakat Solution">
         <menu>
+
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_fund"
+                android:title="Donate Us" />
             <item
                 android:id="@+id/nav_aboutUs"
                 android:icon="@drawable/ic_about"
                 android:title="About Us" />
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_share"
-                android:title="Share apps" />
+                android:id="@+id/nav_ContactUs"
+                android:icon="@drawable/ic_contact"
+                android:title="Contact Us" />
+
             <item
-                android:id="@+id/nav_rateUs"
+                android:id="@+id/nav_RateUs"
                 android:icon="@drawable/ic_rate"
-                android:title="Rate Us" />
+                android:title="Rate Apps" />
 
         </menu>
     </item>

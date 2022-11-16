@@ -19,7 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class UserZakatApplication extends AppCompatActivity {
+public class User_Zakat_Application_Form extends AppCompatActivity {
 
     private static final int CAMERA_REQUEST = 1888;
     private static final int MY_CAMERA_PERMISSION_CODE = 100;
@@ -33,7 +33,7 @@ public class UserZakatApplication extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.user_zakat_application);
+        setContentView(R.layout.user_zakat_application_form);
 
         radioGroupMaritalStatus = findViewById(R.id.radioGroupMaritalStatus);
         radioButtonMarried = findViewById(R.id.rbMarried);

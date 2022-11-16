@@ -16,7 +16,7 @@
         android:theme="@style/Theme.SmartZakatSolution"
         tools:targetApi="31">
         <activity
-            android:name=".Donor_Details"
+            android:name=".Donor_Details_Form"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -52,14 +52,15 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Login_User"
+            android:theme="@style/Theme.SmartZakatSolution.NoActionBar"
+            android:name=".Donor_Profile_Dashboard"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".UserZakatApplication"
+            android:name=".User_Zakat_Application_Form"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -80,7 +81,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Donor_Profile_Dashboard"
+            android:name=".User_Profile_Dashboard"
             android:theme="@style/Theme.SmartZakatSolution.NoActionBar"
             android:exported="true">
             <intent-filter>

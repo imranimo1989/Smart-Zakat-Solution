@@ -31,8 +31,8 @@
 
 
 
-        <!--heading toolbar-->
-   <!-- <androidx.cardview.widget.CardView
+        <!--heading toolbar
+   <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="5dp"
@@ -146,7 +146,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
+                            android:gravity="start"
                             android:text="Update Profile"
                             android:textColor="@color/gold_regular"
                             android:textStyle="bold"
@@ -160,7 +160,7 @@
                             android:gravity="start"
                             android:text="Please update your profile to see all the zakat applicant list"
                             android:textColor="@color/GoldWhite"
-                            android:textStyle="bold"
+                            android:textStyle="normal"
                             />
 
 
@@ -221,7 +221,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
+                            android:gravity="start"
                             android:text="Zakat Applicant"
                             android:textColor="@color/gold_regular"
                             android:textStyle="bold"
@@ -235,7 +235,7 @@
                             android:gravity="start"
                             android:text="See All Zakat Application. And Donate only verified Applicant."
                             android:textColor="@color/GoldWhite"
-                            android:textStyle="bold"
+                            android:textStyle="normal"
                             />
 
 
@@ -295,7 +295,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
+                            android:gravity="start"
                             android:text="Zakat Calculator"
                             android:textColor="@color/gold_regular"
                             android:textStyle="bold"
@@ -309,7 +309,7 @@
                             android:gravity="start"
                             android:text="calculate your zakat with 100% Accuracy by Islami Sariah "
                             android:textColor="@color/GoldWhite"
-                            android:textStyle="bold"
+                            android:textStyle="normal"
                             />
 
 
