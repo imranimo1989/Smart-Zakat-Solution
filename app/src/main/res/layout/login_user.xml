@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:background="@drawable/background2"
+    android:gravity="center"
     tools:context=".Login_User">
-
 
 
     <androidx.cardview.widget.CardView
@@ -16,18 +15,19 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:padding="25dp"
-        app:cardElevation="10dp"
         app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
 
         >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:orientation="vertical"
             android:gravity="center"
-          android:paddingHorizontal="20dp"
-           android:paddingVertical="20dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="20dp"
 
 
             >
@@ -36,8 +36,8 @@
                 android:id="@+id/logoCover"
                 android:layout_width="150dp"
                 android:layout_height="120dp"
-                android:scaleType="centerCrop"
                 android:padding="15dp"
+                android:scaleType="centerCrop"
                 android:src="@drawable/logonew"
                 tools:ignore="ContentDescription" />
 
@@ -67,8 +67,8 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/enter_your_mobile_no"
                     android:layout_marginTop="20dp"
+                    android:hint="@string/enter_your_mobile_no"
 
                     android:textColor="@color/gold_dark"
                     app:endIconMode="clear_text"
@@ -121,11 +121,11 @@
                     android:minHeight="48dp"
                     android:padding="10dp"
                     android:text="@string/don_t_remember_your_pin"
+                    android:textColor="@color/gold_regular"
                     android:textSize="15sp"
                     android:textStyle="italic"
-                    tools:targetApi="m"
-                    android:textColor="@color/gold_regular"
-                    tools:ignore="UnusedAttribute" />
+                    tools:ignore="UnusedAttribute"
+                    tools:targetApi="m" />
 
             </LinearLayout>
 
@@ -135,34 +135,89 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="2"
+
                 >
 
 
+                <LinearLayout
+                    android:id="@+id/layoutLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/gold_regular"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
 
-            <Button
-                android:id="@+id/btLogin"
-                android:layout_width="fill_parent"
-                android:layout_height="60dp"
-                android:layout_weight="1"
-                android:layout_marginEnd="6dp"
-                android:text="@string/login_main"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                style="?android:attr/buttonStyle" />
 
-            <Button
-                android:id="@+id/btReg"
-                android:layout_width="fill_parent"
-                android:layout_height="60dp"
-                android:layout_weight="1"
-                android:layout_marginStart="6dp"
-                android:text="@string/registration"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/GoldDark"
-                android:textStyle="bold"
-                style="?android:attr/button"/>
+                    >
+
+                    <ProgressBar
+                        android:id="@+id/progresLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:indeterminate="true"
+                        android:indeterminateTint="@color/white"
+                        android:indeterminateTintMode="src_atop"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Login"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layoutReg"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/gold_regular"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+
+                    >
+
+                    <ProgressBar
+                        android:id="@+id/progresReg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:indeterminate="true"
+                        android:indeterminateTint="@color/white"
+                        android:indeterminateTintMode="src_atop"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Registration"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
 
             </LinearLayout>
+
+
             <TextView
                 android:id="@+id/tvAboutUs"
                 android:layout_width="wrap_content"
@@ -172,14 +227,13 @@
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
 
-               android:padding="10dp"
+                android:padding="10dp"
                 android:text="Learn About Smart Zakat Solution App"
+                android:textColor="@color/gold_regular"
                 android:textSize="15sp"
                 android:textStyle="italic"
-                tools:targetApi="m"
-                android:textColor="@color/gold_regular"
-                tools:ignore="UnusedAttribute" />
-
+                tools:ignore="UnusedAttribute"
+                tools:targetApi="m" />
 
 
         </LinearLayout>

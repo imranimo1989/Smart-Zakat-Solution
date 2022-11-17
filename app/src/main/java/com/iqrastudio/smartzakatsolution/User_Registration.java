@@ -80,7 +80,7 @@ public class User_Registration extends AppCompatActivity {
                         String rbUserType = userTypeText.getText().toString();
 
 
-                        String url = "https://blazeincorporation.com/zakat_solution_app/user_data.php?" +
+                        String url = "http://blazeincorporation.com/zakat_solution_app/insert_user_reg.php?" +
                                 "type=" + rbUserType + "&mobile=" + userMobile + "&pw=" + userPin + "&conpw=" + userConPin;
 
 
