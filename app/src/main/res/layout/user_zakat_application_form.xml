@@ -1151,6 +1151,7 @@
 
         <!--        রেজিস্ট্রেশন সাবমিট বাটন-->
         <Button
+            android:id="@+id/buttonRegistration"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"

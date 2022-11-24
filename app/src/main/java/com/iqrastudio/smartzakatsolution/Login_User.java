@@ -79,7 +79,12 @@ public class Login_User extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                //First Check Blank input check
+                Intent intent = new Intent(Login_User.this, User_Profile_Dashboard.class);
+                startActivity(intent);
+
+
+
+             /*   //First Check Blank input check
                 if (etLoginUserMob.getText().toString().isEmpty() || etLoginUserPin.getText().toString().isEmpty()) {
 
                     new AlertDialog.Builder(Login_User.this)
@@ -93,17 +98,17 @@ public class Login_User extends AppCompatActivity {
 
                     progressBarLogin.setVisibility(View.VISIBLE);
                     String queryLoginNum = "https://blazeincorporation.com/zakat_solution_app/query_user_mobile.php?user_mob=" + etLoginUserMob.getText().toString() + "user_pw" + etLoginUserPin.getText().toString();
-
-
+*/
+/*
                     JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, queryLoginNum, null, new Response.Listener<JSONArray>() {
                         @Override
                         public void onResponse(JSONArray response) {
 
                             progressBarLogin.setVisibility(View.GONE);
 
-                            for (int i =0; 0<response.length())
+                            for (int i =0; 0<response.length();i++)
 
-                            JSONObject jsonObject = new JSONObject(response.length());
+                            JSONObject jsonObject = new JSONObject(response);
 
                             String loginId = jsonObject.getString("user_mobile");
                             String loginPin = jsonObject.getString("user_pw");
@@ -120,7 +125,7 @@ public class Login_User extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(),"Server Response Error",Toast.LENGTH_SHORT).show();
 
                         }
-                    });
+                    });*/
 
 
                 /*
@@ -177,7 +182,7 @@ public class Login_User extends AppCompatActivity {
 
                         }
                     });*/
-                    requestQueue.add(jsonArrayRequest);
+                 //   requestQueue.add(jsonArrayRequest);
 
 
 
@@ -188,13 +193,13 @@ public class Login_User extends AppCompatActivity {
 
 
 
-                }
+                /*}
 
                 }
         });
         //===============================================================
 
-
+*/
 
 
 
@@ -297,10 +302,10 @@ public class Login_User extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), User_Registration.class);
         startActivity(intent);
         //overridePendingTransition(R.anim.slide_in_left,R.anim.slide_in_right);
-
+*/
     }
     });
-*/
+
 
         //===================================================================
 

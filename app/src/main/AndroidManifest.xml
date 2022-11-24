@@ -53,8 +53,8 @@
                 android:value="" />
         </activity>
         <activity
-            android:theme="@style/Theme.SmartZakatSolution.NoActionBar"
-            android:name=".User_Profile_Dashboard"
+
+            android:name=".Login_User"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -82,7 +82,8 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Login_User"
+            android:theme="@style/Theme.SmartZakatSolution.NoActionBar"
+            android:name=".User_Profile_Dashboard"
 
             android:exported="true">
             <intent-filter>
