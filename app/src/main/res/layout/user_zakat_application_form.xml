@@ -156,7 +156,7 @@
                 android:textColor="@color/GoldDark" />
 
             <RadioGroup
-                android:id="@+id/radioGroup"
+                android:id="@+id/radioGroupGender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -558,7 +558,7 @@
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etHusWifeName"
+                    android:id="@+id/etSpouseName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
@@ -581,7 +581,7 @@
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etWifeMobile"
+                    android:id="@+id/etSpouseMobile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
@@ -706,6 +706,7 @@
                 android:textColor="@color/GoldDark" />
 
             <RadioGroup
+                android:id="@+id/radioGroupOwnHouse"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -776,6 +777,7 @@
                 android:textColor="@color/GoldDark" />
 
             <RadioGroup
+                android:id="@+id/radioGroupPrvZakHis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -1150,16 +1152,47 @@
 
 
         <!--        রেজিস্ট্রেশন সাবমিট বাটন-->
-        <Button
-            android:id="@+id/buttonRegistration"
+
+
+        <LinearLayout
+            android:id="@+id/layoutSubmitApplication"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="20dp"
-            android:padding="13dp"
-            android:text="Registration"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
+            android:layout_height="60dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:background="@color/gold_regular"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+
+            >
+
+            <ProgressBar
+                android:id="@+id/progresSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/white"
+                android:indeterminateTintMode="src_atop"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Submit Application"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
 
         <!--  &lt;!&ndash;//ছেলে সংখ্যাঃ&ndash;&gt;
           <com.google.android.material.textfield.TextInputLayout
